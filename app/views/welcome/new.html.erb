@@ -1,0 +1,19 @@
+
+  <%= form_tag welcome_path, method: :post do |f| %>
+  <%= text_field_tag :name %>
+    <br>
+    <%= text_field_tag :email %>
+    <br>
+    <%= text_field_tag :pass %>
+    <br>
+    <%= submit_tag 'Submit' %>
+  <% end %>
+
+  form_for
+  <%= form_for :user, :url => welcome_path(@user) do |f| %>
+    <%= f.text_field :name %><br />
+    <%= f.text_field :email %><br />
+    <%= f.text_field :pass %><br />
+    <%= submit_tag 'Submit' %>
+  <% end %>
+

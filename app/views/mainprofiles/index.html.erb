@@ -1,0 +1,14 @@
+<%= form_for :mainprofile, url: mainprofiles_path do |f|  %>
+  <%= f.text_field :f_name, placeholder: 'Enter your first name' %><br>
+  <%= f.text_field :l_name %><br>
+  <%= f.select :city, options_for_select(['Indore', 'Bhopal', 'Pune', 'Delhi']) %><br>
+  <%= f.number_field :age %><br>
+  <%= f.radio_button :gender, 'Male' %>Male<br>
+  <%= f.radio_button :gender, 'Female' %>Female<br>
+  <% %w(hockey cricket football snooker chess).each do |hoby| %>
+    <%= f.check_box 'hobbies[]' %><%= hoby.capitalize %><br>
+  <% end %>
+  <%= f.text_area :about %><br>
+  <%= f.check_box :age_above18 %>Age above 18<br>
+  <%= f.submit %>
+<% end %>

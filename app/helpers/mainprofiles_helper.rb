@@ -1,0 +1,2 @@
+module MainprofilesHelper
+end

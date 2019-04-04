@@ -1,0 +1,14 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+
+
+<%= link_to "NEW USER", new_user_path %>
+<br>
+
+
+List of all users
+
+<% User.all.each do |user| %>
+  <%= user.name %><br>
+<% end %>
